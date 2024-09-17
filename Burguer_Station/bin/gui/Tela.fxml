@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <ImageView fitHeight="992.0" fitWidth="1336.0" layoutX="-42.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Users/ericd/OneDrive/Área%20de%20Trabalho/Design%20sem%20nome.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtMesa" layoutX="36.0" layoutY="121.0" prefHeight="32.0" prefWidth="178.0" promptText="Insira o número da mesa" style="-fx-border-color: black; -fx-border-radius: 1px; -fx-border-width: 1px;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtHora" layoutX="219.0" layoutY="121.0" prefHeight="31.0" prefWidth="235.0" promptText="Informe a hora que o pedido foi feito" style="-fx-border-color: black;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button fx:id="btnSalvar" layoutX="1116.0" layoutY="238.0" mnemonicParsing="false" onAction="#OnBtnSalvar" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #A52A2A; -fx-border-width: 1px; -fx-border-color: black; -fx-text-fill: black;" styleClass="button2" stylesheets="@../application/application.css" text="Salvar" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="445.0" layoutY="18.0" prefHeight="45.0" prefWidth="383.0" text="BURGUER STATION" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Burger Free" size="38.0" />
+         </font>
+      </Label>
+      <Separator layoutX="36.0" layoutY="63.0" prefHeight="17.0" prefWidth="1218.0" />
+      <Label layoutX="469.0" layoutY="96.0" prefHeight="17.0" prefWidth="61.0" text="Itens" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="95.0" prefHeight="27.0" prefWidth="162.0" text="Horário do Pedido" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="954.0" layoutY="96.0" prefHeight="27.0" prefWidth="162.0" text="Situação" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="69.0" fitWidth="45.0" layoutX="794.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Users/ericd/OneDrive/Área%20de%20Trabalho/pngtree-cartoon-hamburger-sticker-vector-png-image_6823822.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="806.0" layoutY="96.0" prefHeight="27.0" prefWidth="108.0" text="Quantidade" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerQtd" layoutX="806.0" layoutY="121.0" prefHeight="31.0" prefWidth="136.0" style="-fx-border-color: black;" />
+      <ComboBox fx:id="comboBoxBurgers" layoutX="469.0" layoutY="121.0" prefHeight="31.0" prefWidth="328.0" style="-fx-border-color: black;" />
+      <ComboBox fx:id="comboBoxStatus" layoutX="954.0" layoutY="122.0" prefHeight="31.0" prefWidth="300.0" style="-fx-border-color: black;" />
+      <Separator layoutX="36.0" layoutY="295.0" prefHeight="17.0" prefWidth="1218.0" />
+      <TableView fx:id="table" layoutX="36.0" layoutY="389.0" prefHeight="465.0" prefWidth="1218.0" style="-fx-border-color: black; -fx-border-width: 2px;">
+        <columns>
+          <TableColumn fx:id="IDColmn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="MesaColmn" prefWidth="199.0" text="MESA" />
+            <TableColumn fx:id="HorarioColmn" prefWidth="173.0" text="HORÁRIO" />
+            <TableColumn fx:id="ItensColmn" prefWidth="297.0" text="PEDIDO" />
+            <TableColumn fx:id="QuantidadeColmn" prefWidth="233.0" text="QUANTIDADE" />
+            <TableColumn fx:id="StatusColmn" minWidth="0.0" prefWidth="240.0" text="SITUAÇÃO" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="96.0" prefHeight="17.0" prefWidth="61.0" text="Mesa" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="319.0" prefHeight="27.0" prefWidth="218.0" text="Buscar Pedido por ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPedidoID" layoutX="36.0" layoutY="346.0" prefHeight="32.0" prefWidth="1036.0" promptText="Insira o ID do pedido desejado" style="-fx-border-color: black; -fx-border-radius: 1px; -fx-border-width: 1px;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnBuscar" layoutX="1117.0" layoutY="346.0" mnemonicParsing="false" onAction="#buscarPedido" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #A52A2A; -fx-border-width: 1px; -fx-border-color: black; -fx-text-fill: black;" styleClass="button2" stylesheets="@../application/application.css" text="Buscar" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRecarregar" layoutX="1077.0" layoutY="346.0" mnemonicParsing="false" onAction="#gerarRelatorio" prefHeight="33.0" prefWidth="33.0" style="-fx-border-width: 1px; -fx-background-color: white; -fx-border-color: black; -fx-text-fill: black; -fx-background-radius: 20;" styleClass="button2" stylesheets="@../application/application.css" />
+      <FontAwesomeIcon disable="true" glyphName="REFRESH" layoutX="1085.0" layoutY="369.0" size="20" wrappingWidth="16.285714149475098" />
+      <Button fx:id="btnReturn" layoutX="36.0" layoutY="18.0" mnemonicParsing="false" onAction="#trocarTela" prefHeight="25.0" prefWidth="24.0" stylesheets="@../application/application.css" />
+      <FontAwesomeIcon disable="true" glyphName="BACKWARD" layoutX="40.0" layoutY="36.0" size="15" />
+      <Button fx:id="btnEditar" layoutX="954.0" layoutY="238.0" mnemonicParsing="false" onAction="#editarPedido" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: dark yellow; -fx-border-width: 1px; -fx-border-color: black; -fx-text-fill: black;" styleClass="button2" stylesheets="@../application/application.css" text="Editar" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDeletar" layoutX="806.0" layoutY="238.0" mnemonicParsing="false" onAction="#deletarPedido" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: dark yellow; -fx-border-width: 1px; -fx-border-color: black; -fx-text-fill: black;" styleClass="button2" stylesheets="@../application/application.css" text="Deletar" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <Bloom threshold="1.0" />
+   </effect>
+</AnchorPane>
