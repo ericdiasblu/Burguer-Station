@@ -246,5 +246,6 @@ public class Controller {
 			JOptionPane.showMessageDialog(null, "Nenhum pedido selecionado para deletar.");
 		}
 	}
+	
 
 }
